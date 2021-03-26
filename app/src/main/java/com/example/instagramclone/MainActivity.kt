@@ -1,10 +1,12 @@
 package com.example.instagramclone
 
+import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
+import android.view.MenuItem
 import android.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -69,6 +71,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.user->{
+                    bottomNavBar.menu.findItem(R.id.home).setChecked(true)
                     manager.beginTransaction().apply {
                         replace(R.id.fragment, profileFragment)
                         commit()

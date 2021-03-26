@@ -41,15 +41,18 @@
             android:layout_width="match_parent"
             android:layout_alignParentBottom="true"
             android:layout_height="50dp"
+            android:background="@color/black"
             android:id="@+id/bottom_navigation_container">
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:background="@color/black"
-                app:itemIconTint="@color/white"
+                app:itemBackground="@color/white"
                 app:labelVisibilityMode="unlabeled"
                 app:menu="@menu/bottom_navigation_menu"
+                app:itemIconSize="30dp"
+                android:focusableInTouchMode="true"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="2dp"
                 android:id="@+id/bottom_navigation_bar" />
 
         </RelativeLayout>
