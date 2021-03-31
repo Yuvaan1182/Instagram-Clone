@@ -1,16 +1,14 @@
 package com.example.instagramclone
 
-import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
-import android.view.MenuItem
-import android.widget.Toolbar
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import com.google.android.material.bottomnavigation.BottomNavigationMenu
+import com.example.instagramclone.Home.HomeFragment
+import com.example.instagramclone.Like.FavouriteFragment
+import com.example.instagramclone.Profile.ProfileFragment
+import com.example.instagramclone.Search.SearchFragment
+import com.example.instagramclone.Share.ShareFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -26,16 +24,25 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavBar = findViewById(R.id.bottom_navigation_bar)
 
+        setBottomNav()
+        val homeFragment = HomeFragment()
+        manager.beginTransaction().apply {
+            replace(R.id.fragment, homeFragment)
+            commit()
+        }
+
+
+
+    }
+
+    // setting up bottom navigation bar
+    private fun setBottomNav(){
+
         val homeFragment = HomeFragment()
         val favouriteFragment = FavouriteFragment()
         val searchFragment = SearchFragment()
         val shareFragment = ShareFragment()
         val profileFragment = ProfileFragment()
-
-        manager.beginTransaction().apply {
-            replace(R.id.fragment, homeFragment)
-            commit()
-        }
 
         bottomNavBar.setOnNavigationItemSelectedListener { item->
             when(item.itemId){
@@ -83,7 +90,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

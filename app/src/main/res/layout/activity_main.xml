@@ -12,23 +12,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/top_navigation_toolbar"
-            android:layout_alignParentTop="true">
-
-            <androidx.appcompat.widget.Toolbar
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/toolbar"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                android:background="@color/black" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/view_pager_container">
+            android:id="@+id/home_fragment_container">
 
             <FrameLayout
                 android:id="@+id/fragment"

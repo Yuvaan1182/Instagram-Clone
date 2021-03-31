@@ -1,19 +1,17 @@
-package com.example.instagramclone
+package com.example.instagramclone.Profile
 
-
-import android.content.Context
 import android.os.Bundle
-import android.util.Log
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import android.content.Context
+import android.util.Log
+import com.example.instagramclone.R
 
+class ProfileFragment : Fragment() {
 
-
-class ShareFragment : Fragment() {
-
-    val TAG = "Share Fragment"
+    val TAG = "Profile Fragment"
     override fun onAttach(context: Context) {
         Log.d(TAG, "onAttach")
         super.onAttach(context)
@@ -28,7 +26,7 @@ class ShareFragment : Fragment() {
         //returns a layout through inflater
         //inflater!! --> means inflater cannot be null
         Log.d(TAG, "onCreateView")
-        return inflater!!.inflate(R.layout.fragment_share, container, false)
+        return inflater!!.inflate(R.layout.fragment_profile, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

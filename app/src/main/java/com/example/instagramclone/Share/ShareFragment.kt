@@ -1,4 +1,4 @@
-package com.example.instagramclone
+package com.example.instagramclone.Share
 
 
 import android.content.Context
@@ -8,12 +8,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.instagramclone.R
 
 
+class ShareFragment : Fragment() {
 
-class SearchFragment : Fragment() {
-
-    val TAG = "Search Fragment"
+    val TAG = "Share Fragment"
     override fun onAttach(context: Context) {
         Log.d(TAG, "onAttach")
         super.onAttach(context)
@@ -28,7 +28,7 @@ class SearchFragment : Fragment() {
         //returns a layout through inflater
         //inflater!! --> means inflater cannot be null
         Log.d(TAG, "onCreateView")
-        return inflater!!.inflate(R.layout.fragment_search, container, false)
+        return inflater!!.inflate(R.layout.fragment_share, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

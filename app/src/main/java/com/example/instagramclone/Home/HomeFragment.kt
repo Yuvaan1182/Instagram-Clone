@@ -1,4 +1,4 @@
-package com.example.instagramclone
+package com.example.instagramclone.Home
 
 //Fragment is a modular section of activity or sub activity
 //inside an activity, jiskikhud ki lifecycle h, khud k input
@@ -31,12 +31,14 @@ package com.example.instagramclone
 
 import android.content.Context
 import android.os.Bundle
+import android.text.TextUtils.replace
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
-
+import com.example.instagramclone.R
 
 
 class HomeFragment : Fragment() {
@@ -56,6 +58,17 @@ class HomeFragment : Fragment() {
         //returns a layout through inflater
         //inflater!! --> means inflater cannot be null
         Log.d(TAG, "onCreateView")
+//        val camera: ImageView = container!!.findViewById(R.id.camera)
+//        val message: ImageView = container!!.findViewById(R.id.message)
+//        val cameraFragment: CameraFragment = CameraFragment()
+//        val messagesFragment: MessagesFragment = MessagesFragment()
+//
+//
+//        messagesFragment.parentFragmentManager.beginTransaction().apply {
+//            replace(R.id.home_fragment, messagesFragment)
+//            commit()
+//        }
+
         return inflater!!.inflate(R.layout.fragment_home, container, false)
     }
 
