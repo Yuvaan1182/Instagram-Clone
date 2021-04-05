@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.example.instagramclone">
+    package="com.example.instagramclone">
 
     <application
         android:allowBackup="true"
@@ -16,12 +16,10 @@ package="com.example.instagramclone">
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Profile.UserProfileActivity" />
+        <activity android:name=".Favourite.FavouriteActivity"></activity>
+        <activity android:name=".Profile.ProfileActivity" />
         <activity android:name=".Share.ShareActivity" />
-        <activity android:name=".Favourite.FavouritesActivity" />
         <activity android:name=".Search.SearchActivity" />
-
     </application>
+
 </manifest>
-
-

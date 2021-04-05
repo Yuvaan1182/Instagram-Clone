@@ -1,15 +1,9 @@
 package com.example.instagramclone.Home
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import com.example.instagramclone.Favourite.FavouritesActivity
-import com.example.instagramclone.Profile.UserProfileActivity
 import com.example.instagramclone.R
-import com.example.instagramclone.Search.SearchActivity
-import com.example.instagramclone.Share.ShareActivity
+import com.example.instagramclone.Utils.BottomNavigation
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
@@ -25,39 +19,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setBotttomNav(){
-        lateinit var intent: Intent
-        bottomNavigationView.setOnNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.home->{
-                    intent = Intent(this, HomeActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.search ->{
-                    intent = Intent(this, SearchActivity:: class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.add -> {
-                    intent = Intent(this, ShareActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.favourite ->{
-                    intent = Intent(this, FavouritesActivity:: class.java)
-                    startActivity(intent)
-                    true
-                }
-                R.id.user -> {
-                    intent = Intent(this, UserProfileActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-                else -> {
-                    false
-                }
-            }
-
-        }
+        val bn = BottomNavigation(this, bottomNavigationView)
+        bn.setBottomNavigation()
     }
 }

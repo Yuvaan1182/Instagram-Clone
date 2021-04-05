@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Home.HomeActivity">
 
     <RelativeLayout
@@ -37,22 +37,7 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_height="50dp"
-            android:id="@+id/bottom_navigation_container">
-
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:background="@color/black"
-                app:itemIconTint="@color/white"
-                app:labelVisibilityMode="unlabeled"
-                app:menu="@menu/bottom_navigation_menu"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:id="@+id/bottom_navigation_bar" />
-
-        </RelativeLayout>
+        <include layout="@layout/bottom_navigation_view" />
 
     </RelativeLayout>
 
