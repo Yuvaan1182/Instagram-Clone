@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
 import com.example.instagramclone.R
 import com.example.instagramclone.Utils.BottomNavigation
+import com.example.instagramclone.Utils.ViewPagerAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
 
@@ -28,8 +29,8 @@ class HomeActivity : AppCompatActivity() {
         val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
         val viewPager : ViewPager = findViewById(R.id.view_pager)
 
-        viewPagerAdapter.addFragment(CameraFragment())
         viewPagerAdapter.addFragment(HomeFragment())
+        viewPagerAdapter.addFragment(CameraFragment())
         viewPagerAdapter.addFragment(MessengerFragment())
 
         viewPager.adapter = viewPagerAdapter

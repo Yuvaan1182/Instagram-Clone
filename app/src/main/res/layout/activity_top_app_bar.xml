@@ -5,35 +5,31 @@
     android:layout_height="50dp">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/profile_toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/black"
-        app:menu="@menu/profile_toolbar_menu">
+        android:id="@+id/account_settings_toolbar">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back_arrow"
+                android:id="@+id/back_arrow"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:layout_centerVertical="true"
-                android:text="yuvaan.singh.hello.world"
+                android:layout_marginLeft="50dp"
+                android:text="Settings"
                 android:textColor="@color/white"
-                android:textSize="18sp"
-                android:layout_marginLeft="20dp"/>
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/settings"
-                android:id="@+id/profile_settings"
-                android:layout_marginRight="20dp"/>
-
+                android:textSize="30sp" />
         </RelativeLayout>
 
     </androidx.appcompat.widget.Toolbar>

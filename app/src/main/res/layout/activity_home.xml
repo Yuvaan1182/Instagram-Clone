@@ -24,14 +24,7 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/view_pager_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <include layout="@layout/center_home_frag_container"/>
-
-        </RelativeLayout>
+        <include layout="@layout/view_pager_adapter"/>
 
         <include layout="@layout/bottom_navigation_view" />
 
